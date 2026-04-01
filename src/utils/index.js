@@ -49,7 +49,7 @@ export async function fetchResponse(url, userAgent) {
     const textData = await response.text();
     let data;
     try {
-        data = YAML.parse(textData, { maxAliasCount: -1, merge: true });
+        data = YAML.parse(textData, { merge: true });
     } catch {
         try {
             data = JSON.parse(textData);
